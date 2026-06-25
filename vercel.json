@@ -1,4 +1,4 @@
 {
-  "buildCommand": "npm run build",
+  "buildCommand": "HUGO_BASEURL=https://$VERCEL_URL npm run build",
   "outputDirectory": "public"
 }
