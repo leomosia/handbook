@@ -57,6 +57,14 @@ npm run lint:md
 npm run check
 ```
 
+## Vercel Deployment
+
+This repository is ready to deploy as a static Hugo site on Vercel.
+
+- Build command: `npm run build`
+- Output directory: `public`
+- The root `vercel.json` already declares both settings for Vercel
+
 ## Repository Shape
 
 ```text
