@@ -64,8 +64,8 @@ This repository is ready to deploy as a static Hugo site on Vercel.
 - Build command: `npm run build`
 - Output directory: `public`
 - The root `vercel.json` already declares both settings for Vercel
-- If the Vercel project was created earlier with a different preset, set
-  Framework Preset to `Hugo` in the project settings too
+- The repo bundles Hugo through `hugo-extended`, so Vercel does not need a
+  preinstalled `hugo` binary
 
 ## Repository Shape
 

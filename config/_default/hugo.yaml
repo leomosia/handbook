@@ -1,6 +1,6 @@
 baseURL: https://handbook.leomosia.com/
 locale: en-US
-title: The Leo Mosia Handbook
+title: Leo Mosia Handbook
 
 enableGitInfo: true
 enableRobotsTXT: true
@@ -21,7 +21,7 @@ params:
     sidebar_cache_limit: 1000
     navbar_logo: true
     footer_about_enable: false
-    showLightDarkModeMenu: true
+    showLightDarkModeMenu: false
   links:
     user: []
     developer: []
