@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Oswald:wght@500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+  --lm-font-body: 'Jost', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --lm-font-heading: 'PlayFair Display', Georgia, 'Times New Roman', serif;
+  --lm-font-accent: 'Oswald', 'Jost', system-ui, sans-serif;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+.td-content,
+.td-sidebar,
+.td-toc,
+.navbar,
+.navbar-brand,
+.handbook-home-grid,
+.handbook-section-grid {
+  font-family: var(--lm-font-body);
+}
+
+h1,
+h2,g
+h3,
+h4,
+h5,
+h6,
+.td-content h1,
+.td-content h2,
+.td-content h3,
+.td-content h4,
+.td-content h5,
+.td-content h6,
+.handbook-home-hero h1,
+.handbook-home-note h2 {
+  font-family: var(--lm-font-heading);
+  font-weight: 600;
+}
+
+.navbar-brand__name,
+.handbook-home-kicker,
+.td-sidebar .td-sidebar-link__page,
+.td-toc #TableOfContents a,
+.handbook-home-actions a,
+.handbook-home-grid a {
+  font-family: var(--lm-font-accent);
+}
+
+.handbook-home-hero {
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 7rem 1.5rem 3rem;
+}
+
+.handbook-home-kicker {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.handbook-home-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 0;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  max-width: 62rem;
+}
+
+.handbook-home-hero p {
+  color: #4b5563;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 48rem;
+}
+
+.handbook-home-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 1.5rem 3rem;
+}
+
+.handbook-home-actions a {
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 0.375rem;
+  color: inherit;
+  font-weight: 700;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+.handbook-home-actions a:first-child {
+  background: #111827;
+  border-color: #111827;
+  color: #ffffff;
+}
+
+.handbook-home-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  margin: 0 auto;
+  max-width: 72rem;
+  padding: 0 1.5rem 4rem;
+}
+
+.handbook-home-grid article {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+}
+
+.handbook-home-grid h2 {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  margin-bottom: 0.75rem;
+}
+
+.handbook-home-grid p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.handbook-home-grid a {
+  font-weight: 700;
+}
+
+.handbook-home-note {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 0 auto 4rem;
+  max-width: 72rem;
+  padding: 2rem 1.5rem 0;
+}
+
+.handbook-home-note h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+}
+
+.handbook-home-note p {
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 48rem;
+}
+
+.handbook-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.handbook-section-card {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0.5rem;
+  color: inherit;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.handbook-section-card:hover {
+  text-decoration: none;
+}
+
+.handbook-section-card strong,
+.handbook-section-card span {
+  display: block;
+}
+
+.handbook-section-card span {
+  margin-top: 0.5rem;
+}
+
+.handbook-page-meta,
+.handbook-meta {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  color: inherit;
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.handbook-page-meta__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}

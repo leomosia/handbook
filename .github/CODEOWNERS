@@ -1,0 +1,24 @@
+# Leo Mosia Handbook ownership.
+#
+# Format:
+# /path/ @github-user-or-team
+#
+# More specific rules should appear after broad rules so they can refine
+# ownership for sensitive or specialist areas.
+
+* @leomosia
+
+/content/handbook/ @leomosia
+/content/handbook/about/ @leomosia
+/content/handbook/company/ @leomosia
+/content/handbook/platform/ @leomosia
+/content/handbook/editorial/ @leomosia
+/content/handbook/academy/ @leomosia
+/content/handbook/institute/ @leomosia
+/content/handbook/governance/ @leomosia
+/content/handbook/technology/ @leomosia
+
+/.github/ @leomosia
+/config/ @leomosia
+/layouts/ @leomosia
+/scripts/ @leomosia

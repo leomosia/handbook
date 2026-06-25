@@ -1,0 +1,9 @@
+{{ $sections := .Page.Sections.ByWeight }}
+<div class="handbook-section-grid">
+  {{ range $sections }}
+    <a class="handbook-section-card" href="{{ .RelPermalink }}">
+      <strong>{{ .LinkTitle }}</strong>
+      {{ with .Summary }}<span>{{ . | plainify }}</span>{{ end }}
+    </a>
+  {{ end }}
+</div>

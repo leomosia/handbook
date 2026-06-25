@@ -1,0 +1,25 @@
+{{ $meta := index site.Data.generated.page_meta .Page.File.Path }}
+{{ if $meta }}
+<aside class="handbook-meta">
+  <h2>Page Stewardship</h2>
+  <dl>
+    {{ with $meta.owners }}
+      <dt>Maintainers</dt>
+      <dd>{{ delimit . ", " }}</dd>
+    {{ end }}
+    {{ with $meta.lastUpdated }}
+      <dt>Last updated</dt>
+      <dd>{{ . }}</dd>
+    {{ end }}
+    {{ with $meta.lastAuthor }}
+      <dt>Last author</dt>
+      <dd>{{ . }}</dd>
+    {{ end }}
+  </dl>
+  <p>
+    <a href="{{ $meta.sourceUrl }}">View source</a>
+    · <a href="{{ $meta.editUrl }}">Edit this page</a>
+    · <a href="{{ $meta.historyUrl }}">View history</a>
+  </p>
+</aside>
+{{ end }}

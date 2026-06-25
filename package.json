@@ -1,0 +1,25 @@
+{
+  "name": "leomosia-handbook",
+  "private": true,
+  "version": "0.1.0",
+  "description": "The Leo Mosia Handbook source site.",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/leomosia/handbook.git"
+  },
+  "scripts": {
+    "meta": "node scripts/generate-handbook-meta.mjs",
+    "dev": "npm run meta && hugo server --bind 0.0.0.0 --port 1313 --appendPort=false --renderToMemory --baseURL ${HANDBOOK_BASE_URL:-http://127.0.0.1:1313}",
+    "dev:localhost": "HANDBOOK_BASE_URL=http://localhost:1313 npm run dev",
+    "dev:wsl": "HANDBOOK_BASE_URL=http://$(hostname -I | awk '{print $1}'):1313 npm run dev",
+    "build": "npm run meta && hugo --gc --minify",
+    "lint:md": "markdownlint-cli2 \"**/*.md\" \"!public/**\" \"!resources/**\" \"!node_modules/**\"",
+    "check": "npm run lint:md && npm run build"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "markdownlint-cli2": "^0.18.1",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1"
+  }
+}

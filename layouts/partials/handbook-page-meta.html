@@ -1,0 +1,18 @@
+{{ $file := "" }}
+{{ with .File }}{{ $file = .Path }}{{ end }}
+{{ $meta := index site.Data.generated.page_meta $file }}
+{{ if $meta }}
+<div class="handbook-page-meta">
+  {{ with $meta.owners }}
+    <div><strong>Maintainers:</strong> {{ delimit . ", " }}</div>
+  {{ end }}
+  {{ with $meta.lastUpdated }}
+    <div><strong>Last updated:</strong> {{ . }}{{ with $meta.lastAuthor }} by {{ . }}{{ end }}</div>
+  {{ end }}
+  <div class="handbook-page-meta__links">
+    <a href="{{ $meta.sourceUrl }}">View source</a>
+    <a href="{{ $meta.editUrl }}">Edit this page</a>
+    <a href="{{ $meta.historyUrl }}">View history</a>
+  </div>
+</div>
+{{ end }}
