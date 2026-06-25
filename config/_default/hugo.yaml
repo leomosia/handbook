@@ -1,6 +1,7 @@
 baseURL: https://handbook.leomosia.com/
 locale: en-US
 title: Leo Mosia Handbook
+theme: docsy
 
 enableGitInfo: true
 enableRobotsTXT: true
@@ -45,13 +46,6 @@ markup:
     startLevel: 2
     endLevel: 4
     ordered: false
-
-module:
-  hugoVersion:
-    extended: true
-    min: 0.158.0
-  imports:
-    - path: github.com/google/docsy
 
 outputs:
   home:
