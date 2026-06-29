@@ -11,8 +11,7 @@ change.
 ## Editing Locally
 
 ```bash
-npm install
-npm run dev
+docker compose up -d
 ```
 
 Then edit Markdown under `content/handbook/`.
