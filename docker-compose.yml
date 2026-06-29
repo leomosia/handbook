@@ -1,0 +1,11 @@
+services:
+  handbook:
+    container_name: handbook-leomosia
+    build: .
+    ports:
+      - "1313:1313"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - HANDBOOK_BASE_URL=http://localhost:1313

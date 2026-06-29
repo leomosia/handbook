@@ -1,0 +1,7 @@
+node_modules
+.git
+.gitignore
+.hugo_build.lock
+public/
+resources/
+output/

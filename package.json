@@ -8,9 +8,11 @@
     "url": "git+ssh://git@github.com/leomosia/handbook.git"
   },
   "scripts": {
+    "clean": "bash scripts/cleanup.sh",
+    "predev": "npm run clean",
+    "prebuild": "npm run clean",
     "meta": "node scripts/generate-handbook-meta.mjs",
-    "dev": "npm run meta && hugo server --bind 0.0.0.0 --port 1313 --appendPort=false --renderToMemory --baseURL ${HANDBOOK_BASE_URL:-http://127.0.0.1:1313}",
-    "dev:localhost": "HANDBOOK_BASE_URL=http://localhost:1313 npm run dev",
+    "dev": "npm run meta && hugo server --bind 0.0.0.0 --port ${HUGO_PORT:-1313} --appendPort=false --renderToMemory --baseURL ${HANDBOOK_BASE_URL:-http://localhost:1313}",
     "dev:wsl": "HANDBOOK_BASE_URL=http://$(hostname -I | awk '{print $1}'):1313 npm run dev",
     "build": "npm run meta && hugo --gc --minify",
     "lint:md": "markdownlint-cli2 \"**/*.md\" \"!public/**\" \"!resources/**\" \"!node_modules/**\"",
